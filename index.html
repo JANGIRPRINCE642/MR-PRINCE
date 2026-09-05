@@ -6,12 +6,19 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>MR PRINCE - Haryanvi, Lofi, Remix & Music Songs</title>
-<meta name="description" content="MR PRINCE par Haryanvi, Hindi, Lofi, Remix aur DJ music songs sune aur discover karein.">
 
-<!-- Stylish Google Font -->
+<meta name="description"
+content="MR PRINCE par Haryanvi, Hindi, Lofi, Remix aur DJ music songs sune aur discover karein.">
+
+<!-- Stylish Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome Icons -->
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
 
@@ -162,6 +169,48 @@ color:#0033cc;
 box-shadow:0 0 20px #0033cc;
 }
 
+/* SOCIAL BUTTONS */
+
+.social-buttons{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:14px;
+flex-wrap:wrap;
+margin-top:20px;
+}
+
+.social-btn{
+width:52px;
+height:52px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+background:#0033cc;
+color:#fff;
+
+border:2px solid #fff;
+
+font-size:23px;
+
+box-shadow:0 0 15px rgba(0,51,204,.5);
+
+transition:.3s;
+}
+
+.social-btn:hover{
+transform:translateY(-6px) scale(1.1);
+
+background:#fff;
+color:#0033cc;
+
+box-shadow:0 0 22px #0033cc;
+}
+
 h2{
 font-family:'Bebas Neue',sans-serif;
 font-size:48px;
@@ -291,6 +340,76 @@ color:#0033cc;
 font-weight:600;
 }
 
+/* CONTACT ICON CARDS */
+
+.contact-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:18px;
+margin-top:25px;
+}
+
+.contact-card{
+background:#fff176;
+
+border:2px solid #0033cc;
+border-radius:18px;
+
+padding:25px 15px;
+
+text-align:center;
+
+transition:.3s;
+
+box-shadow:
+0 5px 20px rgba(0,51,204,.2);
+}
+
+.contact-card:hover{
+transform:translateY(-7px);
+
+background:#fff;
+
+box-shadow:
+0 8px 25px rgba(0,51,204,.4);
+}
+
+.contact-card i{
+font-size:38px;
+margin-bottom:12px;
+color:#0033cc;
+}
+
+.contact-card h3{
+font-family:'Bebas Neue',sans-serif;
+font-size:25px;
+letter-spacing:1px;
+margin:5px 0;
+}
+
+.contact-card p{
+font-size:14px;
+word-break:break-word;
+font-weight:600;
+}
+
+.contact-card a{
+display:inline-block;
+margin-top:8px;
+padding:9px 16px;
+border-radius:20px;
+
+background:#0033cc;
+color:#fff;
+
+border:2px solid #fff;
+}
+
+.contact-card a:hover{
+background:#fff;
+color:#0033cc;
+}
+
 footer{
 text-align:center;
 
@@ -303,6 +422,36 @@ border-top:3px solid #fff;
 
 font-weight:600;
 letter-spacing:.5px;
+}
+
+.footer-social{
+margin-top:15px;
+
+display:flex;
+justify-content:center;
+gap:15px;
+}
+
+.footer-social a{
+width:42px;
+height:42px;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+border-radius:50%;
+
+background:#fff;
+color:#0033cc;
+
+font-size:19px;
+
+transition:.3s;
+}
+
+.footer-social a:hover{
+transform:scale(1.15);
 }
 
 @media(max-width:760px){
@@ -343,12 +492,21 @@ letter-spacing:2px;
 height:160px;
 }
 
+.social-btn{
+width:48px;
+height:48px;
+font-size:20px;
+}
+
 }
 
 </style>
 </head>
 
 <body>
+
+
+<!-- HEADER -->
 
 <header>
 
@@ -360,17 +518,33 @@ MR.<b>PRINCE</b>.COM
 
 <ul>
 
-<li><a href="#home">HOME</a></li>
+<li>
+<a href="#home">HOME</a>
+</li>
 
-<li><a href="#songs">SONGS</a></li>
+<li>
+<a href="#songs">SONGS</a>
+</li>
 
-<li><a href="#download">DOWNLOAD</a></li>
+<li>
+<a href="#download">DOWNLOAD</a>
+</li>
 
-<li><a href="#contact">CONTACT</a></li>
+<li>
+<a href="#contact">CONTACT</a>
+</li>
 
-<li><a href="#youtube">YOUTUBE</a></li>
+<li>
+<a href="#youtube">YOUTUBE</a>
+</li>
 
-<li><a href="#about">ABOUT</a></li>
+<li>
+<a href="#instagram">INSTAGRAM</a>
+</li>
+
+<li>
+<a href="#about">ABOUT</a>
+</li>
 
 </ul>
 
@@ -378,6 +552,8 @@ MR.<b>PRINCE</b>.COM
 
 </header>
 
+
+<!-- HOME -->
 
 <section id="home" class="hero">
 
@@ -393,6 +569,7 @@ MR.<span>PRINCE</span>.COM
 HARYANVI • LOFI • REMIX • DJ MUSIC
 </p>
 
+
 <a class="btn" href="#songs">
 🎵 LISTEN NOW
 </a>
@@ -401,14 +578,71 @@ HARYANVI • LOFI • REMIX • DJ MUSIC
 href="https://www.youtube.com/@HARYANVIVIBES642"
 target="_blank">
 
-▶ YOUTUBE
+<i class="fa-brands fa-youtube"></i>
+YOUTUBE
+
+</a>
+
+
+<!-- SOCIAL ICONS -->
+
+<div class="social-buttons">
+
+<a class="social-btn"
+href="https://www.youtube.com/@HARYANVIVIBES642"
+target="_blank"
+title="YouTube">
+
+<i class="fa-brands fa-youtube"></i>
+
+</a>
+
+
+<a class="social-btn"
+href="https://www.instagram.com/jangir_prince_642/"
+target="_blank"
+title="Instagram">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+
+<a class="social-btn"
+href="https://wa.me/919694750598"
+target="_blank"
+title="WhatsApp">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<a class="social-btn"
+href="tel:9694750598"
+title="Call">
+
+<i class="fa-solid fa-phone"></i>
+
+</a>
+
+
+<a class="social-btn"
+href="mailto:jangirprince642@gmail.com"
+title="Email">
+
+<i class="fa-solid fa-envelope"></i>
 
 </a>
 
 </div>
 
+</div>
+
 </section>
 
+
+<!-- SONGS -->
 
 <section id="songs">
 
@@ -418,6 +652,8 @@ MY <span>SONGS</span>
 
 <div class="cards">
 
+
+<!-- SONG 1 -->
 
 <article class="card">
 
@@ -444,6 +680,8 @@ href="2 Bande.mp3">
 </article>
 
 
+<!-- SONG 2 -->
+
 <article class="card">
 
 <img class="cover-img"
@@ -468,6 +706,8 @@ href="2 Khatole.mp3">
 
 </article>
 
+
+<!-- SONG 3 -->
 
 <article class="card">
 
@@ -494,6 +734,8 @@ href="4G Ka Jamana Remix.mp3">
 </article>
 
 
+<!-- SONG 4 -->
+
 <article class="card">
 
 <img class="cover-img"
@@ -519,6 +761,8 @@ href="7 Gede.mp3">
 </article>
 
 
+<!-- SONG 5 -->
+
 <article class="card">
 
 <img class="cover-img"
@@ -543,6 +787,8 @@ href="9 Round.mp3">
 
 </article>
 
+
+<!-- SONG 6 -->
 
 <article class="card">
 
@@ -574,6 +820,8 @@ href="10-10 Goli.mp3">
 </section>
 
 
+<!-- DOWNLOAD -->
+
 <section id="download">
 
 <h2>
@@ -600,6 +848,8 @@ Tap DOWNLOAD on any song to save it.
 </section>
 
 
+<!-- YOUTUBE -->
+
 <section id="youtube">
 
 <h2>
@@ -607,6 +857,10 @@ MY <span>YOUTUBE</span>
 </h2>
 
 <div class="box">
+
+<i class="fa-brands fa-youtube"
+style="font-size:55px;color:#0033cc;">
+</i>
 
 <p class="muted">
 
@@ -618,7 +872,8 @@ HARYANVI VIBES 642 — mera official YouTube channel.
 href="https://www.youtube.com/@HARYANVIVIBES642"
 target="_blank">
 
-▶ VISIT HARYANVI VIBES 642
+<i class="fa-brands fa-youtube"></i>
+VISIT YOUTUBE
 
 </a>
 
@@ -626,6 +881,45 @@ target="_blank">
 
 </section>
 
+
+<!-- INSTAGRAM -->
+
+<section id="instagram">
+
+<h2>
+MY <span>INSTAGRAM</span>
+</h2>
+
+<div class="box">
+
+<i class="fa-brands fa-instagram"
+style="font-size:55px;color:#0033cc;">
+</i>
+
+<p class="muted">
+
+Follow me on Instagram
+</p>
+
+<p>
+<strong>@jangir_prince_642</strong>
+</p>
+
+<a class="btn"
+href="https://www.instagram.com/jangir_prince_642/"
+target="_blank">
+
+<i class="fa-brands fa-instagram"></i>
+FOLLOW ON INSTAGRAM
+
+</a>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
 
 <section id="about">
 
@@ -647,27 +941,52 @@ lofi vibes, remixes and fresh music.
 </section>
 
 
+<!-- CONTACT -->
+
 <section id="contact">
 
 <h2>
 <span>CONTACT</span> ME
 </h2>
 
-<div class="box">
+
+<div class="contact-grid">
+
+
+<!-- CALL -->
+
+<div class="contact-card">
+
+<i class="fa-solid fa-phone"></i>
+
+<h3>CALL</h3>
 
 <p>
-📞 <strong>9694750598</strong>
+9694750598
 </p>
 
-<a class="btn"
-href="tel:9694750598">
+<a href="tel:9694750598">
 
 CALL NOW
 
 </a>
 
-<a class="btn"
-href="https://wa.me/919694750598"
+</div>
+
+
+<!-- WHATSAPP -->
+
+<div class="contact-card">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+<h3>WHATSAPP</h3>
+
+<p>
+Chat with me
+</p>
+
+<a href="https://wa.me/919694750598"
 target="_blank">
 
 WHATSAPP
@@ -676,14 +995,127 @@ WHATSAPP
 
 </div>
 
+
+<!-- INSTAGRAM -->
+
+<div class="contact-card">
+
+<i class="fa-brands fa-instagram"></i>
+
+<h3>INSTAGRAM</h3>
+
+<p>
+@jangir_prince_642
+</p>
+
+<a href="https://www.instagram.com/jangir_prince_642/"
+target="_blank">
+
+INSTAGRAM
+
+</a>
+
+</div>
+
+
+<!-- EMAIL -->
+
+<div class="contact-card">
+
+<i class="fa-solid fa-envelope"></i>
+
+<h3>EMAIL</h3>
+
+<p>
+jangirprince642@gmail.com
+</p>
+
+<a href="mailto:jangirprince642@gmail.com">
+
+EMAIL ME
+
+</a>
+
+</div>
+
+
+<!-- YOUTUBE -->
+
+<div class="contact-card">
+
+<i class="fa-brands fa-youtube"></i>
+
+<h3>YOUTUBE</h3>
+
+<p>
+HARYANVI VIBES 642
+</p>
+
+<a href="https://www.youtube.com/@HARYANVIVIBES642"
+target="_blank">
+
+YOUTUBE
+
+</a>
+
+</div>
+
+
+</div>
+
 </section>
 
+
+<!-- FOOTER -->
 
 <footer>
 
 © 2026 MR.PRINCE.COM • Made for Music 🎵
 
+
+<div class="footer-social">
+
+<a href="https://www.youtube.com/@HARYANVIVIBES642"
+target="_blank">
+
+<i class="fa-brands fa-youtube"></i>
+
+</a>
+
+
+<a href="https://www.instagram.com/jangir_prince_642/"
+target="_blank">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+
+<a href="https://wa.me/919694750598"
+target="_blank">
+
+<i class="fa-brands fa-whatsapp"></i>
+
+</a>
+
+
+<a href="tel:9694750598">
+
+<i class="fa-solid fa-phone"></i>
+
+</a>
+
+
+<a href="mailto:jangirprince642@gmail.com">
+
+<i class="fa-solid fa-envelope"></i>
+
+</a>
+
+</div>
+
 </footer>
+
 
 </body>
 </html>
