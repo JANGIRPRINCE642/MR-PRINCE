@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,323 +6,352 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>MR PRINCE - Haryanvi, Lofi, Remix & Music Songs</title>
-<meta name="description" content="MR PRINCE par Haryanvi, Hindi, Lofi, Remix aur DJ music songs sune aur discover karein. Latest music aur entertaining tracks ka collection.">
+<meta name="description" content="MR PRINCE par Haryanvi, Hindi, Lofi, Remix aur DJ music songs sune aur discover karein.">
+
+<!-- Stylish Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
 <style>
+
 *{
-  box-sizing:border-box;
-  scroll-behavior:smooth;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 body{
-  margin:0;
-  background:#050505;
-  color:#fff;
-  font-family:Arial,sans-serif;
+margin:0;
+background:#ffd600;
+color:#0033cc;
+font-family:'Poppins',Arial,sans-serif;
 }
 
-/* HEADER */
 header{
-  position:fixed;
-  top:0;
-  width:100%;
-  z-index:10;
-  background:rgba(5,5,5,.92);
-  backdrop-filter:blur(15px);
-  border-bottom:1px solid #ff1744;
-  box-shadow:0 0 18px rgba(255,23,68,.35);
+position:fixed;
+top:0;
+width:100%;
+z-index:10;
+background:#ffd600;
+border-bottom:3px solid #0033cc;
+box-shadow:0 3px 15px rgba(0,51,204,.4);
 }
 
 nav{
-  max-width:1150px;
-  margin:auto;
-  height:70px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 18px;
+max-width:1150px;
+margin:auto;
+min-height:70px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:10px 18px;
 }
 
 .logo{
-  font-size:24px;
-  font-weight:900;
-  text-shadow:0 0 12px #ff1744;
+font-family:'Bebas Neue',sans-serif;
+font-size:32px;
+letter-spacing:2px;
+color:#0033cc;
 }
 
 .logo b{
-  color:#ff1744;
+color:#fff;
+text-shadow:
+0 0 5px #0033cc,
+0 0 12px #0033cc;
 }
 
 ul{
-  display:flex;
-  gap:20px;
-  list-style:none;
-  margin:0;
-  padding:0;
+display:flex;
+gap:18px;
+list-style:none;
+margin:0;
+padding:0;
+flex-wrap:wrap;
+justify-content:center;
 }
 
 a{
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
+color:#0033cc;
+text-decoration:none;
+font-weight:700;
+}
+
+nav a{
+font-size:13px;
+letter-spacing:.5px;
 }
 
 nav a:hover{
-  color:#ff1744;
-  text-shadow:0 0 10px #ff1744;
+color:#fff;
+text-shadow:0 0 8px #0033cc;
 }
 
-/* SECTIONS */
 section{
-  max-width:1150px;
-  margin:auto;
-  padding:95px 20px;
+max-width:1150px;
+margin:auto;
+padding:100px 20px;
 }
 
-/* HERO */
 .hero{
-  height:100vh;
-  max-width:none;
-  display:grid;
-  place-items:center;
-  text-align:center;
+height:100vh;
+max-width:none;
+display:grid;
+place-items:center;
+text-align:center;
 
-  background:
-  radial-gradient(circle at 50% 35%,
-  #650018 0%,
-  #240008 28%,
-  #090002 55%,
-  #050505 75%);
-}
-
-.hero h1{
-  font-size:clamp(50px,9vw,100px);
-  margin:5px 0;
-  text-shadow:
-    0 0 8px #ff1744,
-    0 0 25px #ff1744,
-    0 0 55px rgba(255,23,68,.7);
-}
-
-.hero h1 span,
-h2 span{
-  color:#ff1744;
+background:
+radial-gradient(circle at 50% 30%,
+#fff59d 0%,
+#ffd600 38%,
+#ffb300 75%,
+#ff9800 100%);
 }
 
 .hero p{
-  color:#aaa;
-  font-size:19px;
-  letter-spacing:2px;
+font-size:18px;
+font-weight:800;
+letter-spacing:3px;
 }
 
-/* BUTTONS */
+.hero h1{
+font-family:'Bebas Neue',sans-serif;
+font-size:clamp(65px,10vw,125px);
+letter-spacing:5px;
+margin:5px 0;
+
+color:#0033cc;
+
+text-shadow:
+0 0 5px #fff,
+0 0 15px #fff,
+0 0 30px rgba(0,51,204,.5);
+}
+
+.hero h1 span{
+color:#fff;
+
+text-shadow:
+0 0 5px #0033cc,
+0 0 15px #0033cc,
+0 0 30px #0033cc;
+}
+
 .btn{
-  display:inline-block;
-  padding:13px 24px;
-  border-radius:28px;
-  background:#ff1744;
-  color:#fff;
-  margin:7px;
-  border:1px solid #ff1744;
+display:inline-block;
+padding:13px 24px;
+border-radius:28px;
 
-  box-shadow:
-    0 0 8px #ff1744,
-    0 0 20px rgba(255,23,68,.7);
+background:#0033cc;
+color:#fff;
 
-  transition:.25s;
+margin:7px;
+border:2px solid #fff;
+
+font-weight:800;
+letter-spacing:.5px;
+
+box-shadow:0 0 15px rgba(0,51,204,.6);
+transition:.25s;
 }
 
 .btn:hover{
-  transform:scale(1.06);
-  background:#ff003c;
-  box-shadow:
-    0 0 12px #ff1744,
-    0 0 30px #ff1744,
-    0 0 55px rgba(255,23,68,.8);
+transform:scale(1.06);
+background:#fff;
+color:#0033cc;
+box-shadow:0 0 20px #0033cc;
 }
 
-/* HEADINGS */
 h2{
-  font-size:38px;
-  text-align:center;
-  margin-bottom:35px;
-  text-shadow:0 0 12px rgba(255,23,68,.45);
+font-family:'Bebas Neue',sans-serif;
+font-size:48px;
+letter-spacing:3px;
+text-align:center;
+margin-bottom:35px;
+color:#0033cc;
 }
 
-/* MUSIC CARDS */
+h2 span{
+color:#fff;
+text-shadow:0 0 8px #0033cc;
+}
+
 .cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:22px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:22px;
 }
 
 .card{
-  background:
-    linear-gradient(145deg,#111,#080808);
+background:#fff176;
 
-  border:1px solid #3a1018;
-  border-radius:18px;
-  padding:18px;
+border:2px solid #0033cc;
+border-radius:20px;
 
-  box-shadow:
-    0 0 8px rgba(255,23,68,.12);
+padding:18px;
 
-  transition:.3s;
-  position:relative;
-  overflow:hidden;
-}
+box-shadow:0 5px 20px rgba(0,51,204,.25);
 
-.card::before{
-  content:"";
-  position:absolute;
-  top:0;
-  left:-100%;
-  width:100%;
-  height:2px;
-  background:#ff1744;
-  box-shadow:0 0 15px #ff1744;
-  transition:.4s;
-}
-
-.card:hover::before{
-  left:0;
+transition:.3s;
+overflow:hidden;
 }
 
 .card:hover{
-  transform:translateY(-8px);
-  border-color:#ff1744;
+transform:translateY(-8px);
 
-  box-shadow:
-    0 0 10px rgba(255,23,68,.45),
-    0 0 30px rgba(255,23,68,.18);
+box-shadow:
+0 8px 30px rgba(0,51,204,.5);
+
+border-color:#fff;
 }
 
-.cover{
-  height:150px;
-  border-radius:13px;
-  display:grid;
-  place-items:center;
-  font-size:55px;
+.cover-img{
+width:100%;
+height:170px;
 
-  background:
-    radial-gradient(circle,#ff1744 0%,#680016 25%,#150004 65%,#080808 100%);
+object-fit:cover;
+display:block;
 
-  margin-bottom:16px;
+border-radius:15px;
+border:2px solid #0033cc;
 
-  text-shadow:
-    0 0 10px #fff,
-    0 0 25px #ff1744,
-    0 0 45px #ff1744;
+background:#0033cc;
 
-  box-shadow:
-    inset 0 0 25px rgba(255,23,68,.35);
+box-shadow:
+0 0 15px rgba(0,51,204,.5);
+
+transition:.3s;
+}
+
+.card:hover .cover-img{
+transform:scale(1.03);
+
+box-shadow:
+0 0 25px rgba(0,51,204,.8);
 }
 
 .card h3{
-  min-height:44px;
-  text-shadow:0 0 7px rgba(255,23,68,.5);
+font-family:'Bebas Neue',sans-serif;
+font-size:27px;
+letter-spacing:1.5px;
+
+min-height:44px;
+
+color:#0033cc;
 }
 
 audio{
-  width:100%;
-  margin-top:5px;
+width:100%;
+margin-top:5px;
 }
 
-/* DOWNLOAD */
 .download{
-  display:inline-block;
-  margin:14px 0 0;
-  padding:11px 18px;
-  border-radius:25px;
+display:inline-block;
 
-  background:#151515;
-  color:#fff;
+margin:14px 0 0;
 
-  border:1px solid #ff1744;
+padding:11px 18px;
 
-  transition:.25s;
+border-radius:25px;
+
+background:#0033cc;
+color:#fff;
+
+border:2px solid #fff;
+
+font-weight:800;
+
+transition:.25s;
 }
 
 .download:hover{
-  background:#ff1744;
-  color:#fff;
+background:#fff;
+color:#0033cc;
 
-  box-shadow:
-    0 0 10px #ff1744,
-    0 0 25px rgba(255,23,68,.7);
+box-shadow:
+0 0 15px #0033cc;
 }
 
-/* BOX */
 .box{
-  text-align:center;
-  background:#0d0d0d;
-  border:1px solid #3a1018;
-  border-radius:18px;
-  padding:30px;
+text-align:center;
 
-  box-shadow:
-    0 0 15px rgba(255,23,68,.12);
-}
+background:#fff176;
 
-.box:hover{
-  border-color:#ff1744;
-  box-shadow:
-    0 0 20px rgba(255,23,68,.25);
+border:2px solid #0033cc;
+border-radius:20px;
+
+padding:30px;
+
+box-shadow:
+0 5px 20px rgba(0,51,204,.25);
 }
 
 .muted{
-  color:#999;
+color:#0033cc;
+font-weight:600;
 }
 
-/* FOOTER */
 footer{
-  text-align:center;
-  border-top:1px solid #3a1018;
-  padding:28px;
-  color:#777;
-  box-shadow:0 -5px 20px rgba(255,23,68,.08);
+text-align:center;
+
+padding:28px;
+
+color:#fff;
+background:#0033cc;
+
+border-top:3px solid #fff;
+
+font-weight:600;
+letter-spacing:.5px;
 }
 
-/* MOBILE */
 @media(max-width:760px){
 
-  nav{
-    height:auto;
-    min-height:70px;
-    flex-direction:column;
-    gap:10px;
-    padding:12px;
-  }
-
-  ul{
-    gap:8px;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
-  nav a{
-    font-size:10px;
-  }
-
-  .logo{
-    font-size:20px;
-  }
-
-  section{
-    padding-left:14px;
-    padding-right:14px;
-  }
-
-  h2{
-    font-size:30px;
-  }
+nav{
+flex-direction:column;
+gap:10px;
 }
+
+nav a{
+font-size:10px;
+}
+
+.logo{
+font-size:27px;
+}
+
+section{
+padding-left:14px;
+padding-right:14px;
+}
+
+h2{
+font-size:40px;
+}
+
+.hero h1{
+font-size:70px;
+letter-spacing:3px;
+}
+
+.hero p{
+font-size:14px;
+letter-spacing:2px;
+}
+
+.cover-img{
+height:160px;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
+
 <nav>
 
 <div class="logo">
@@ -329,19 +359,26 @@ MR.<b>PRINCE</b>.COM
 </div>
 
 <ul>
+
 <li><a href="#home">HOME</a></li>
+
 <li><a href="#songs">SONGS</a></li>
+
 <li><a href="#download">DOWNLOAD</a></li>
+
 <li><a href="#contact">CONTACT</a></li>
+
 <li><a href="#youtube">YOUTUBE</a></li>
+
 <li><a href="#about">ABOUT</a></li>
+
 </ul>
 
 </nav>
+
 </header>
 
 
-<!-- HOME -->
 <section id="home" class="hero">
 
 <div>
@@ -363,7 +400,9 @@ HARYANVI • LOFI • REMIX • DJ MUSIC
 <a class="btn"
 href="https://www.youtube.com/@HARYANVIVIBES642"
 target="_blank">
+
 ▶ YOUTUBE
+
 </a>
 
 </div>
@@ -371,7 +410,6 @@ target="_blank">
 </section>
 
 
-<!-- SONGS -->
 <section id="songs">
 
 <h2>
@@ -383,17 +421,24 @@ MY <span>SONGS</span>
 
 <article class="card">
 
-<div class="cover">♪</div>
+<img class="cover-img"
+src="2 Bande.jpg.jpg"
+alt="2 Bande">
 
-<h3>2 Bande</h3>
+<h3>
+2 Bande
+</h3>
 
 <audio controls preload="none"
-src="2 Bande.mp3"></audio>
+src="2 Bande.mp3">
+</audio>
 
 <a class="download"
 download
 href="2 Bande.mp3">
+
 ⬇ DOWNLOAD
+
 </a>
 
 </article>
@@ -401,17 +446,24 @@ href="2 Bande.mp3">
 
 <article class="card">
 
-<div class="cover">♪</div>
+<img class="cover-img"
+src="2 Khatole.jpg.jpg"
+alt="2 Khatole">
 
-<h3>2 Khatole</h3>
+<h3>
+2 Khatole
+</h3>
 
 <audio controls preload="none"
-src="2 Khatole.mp3"></audio>
+src="2 Khatole.mp3">
+</audio>
 
 <a class="download"
 download
 href="2 Khatole.mp3">
+
 ⬇ DOWNLOAD
+
 </a>
 
 </article>
@@ -419,17 +471,24 @@ href="2 Khatole.mp3">
 
 <article class="card">
 
-<div class="cover">♪</div>
+<img class="cover-img"
+src="4G Ka Jamana Remix.jpg"
+alt="4G Ka Jamana Remix">
 
-<h3>4G Ka Jamana Remix</h3>
+<h3>
+4G Ka Jamana Remix
+</h3>
 
 <audio controls preload="none"
-src="4G Ka Jamana Remix.mp3"></audio>
+src="4G Ka Jamana Remix.mp3">
+</audio>
 
 <a class="download"
 download
 href="4G Ka Jamana Remix.mp3">
+
 ⬇ DOWNLOAD
+
 </a>
 
 </article>
@@ -437,17 +496,24 @@ href="4G Ka Jamana Remix.mp3">
 
 <article class="card">
 
-<div class="cover">♪</div>
+<img class="cover-img"
+src="7 Gede.jpg.jpg"
+alt="7 Gede">
 
-<h3>7 Gede</h3>
+<h3>
+7 Gede
+</h3>
 
 <audio controls preload="none"
-src="7 Gede.mp3"></audio>
+src="7 Gede.mp3">
+</audio>
 
 <a class="download"
 download
 href="7 Gede.mp3">
+
 ⬇ DOWNLOAD
+
 </a>
 
 </article>
@@ -455,17 +521,24 @@ href="7 Gede.mp3">
 
 <article class="card">
 
-<div class="cover">♪</div>
+<img class="cover-img"
+src="9 Round.jpg"
+alt="9 Round">
 
-<h3>9 Round</h3>
+<h3>
+9 Round
+</h3>
 
 <audio controls preload="none"
-src="9 Round.mp3"></audio>
+src="9 Round.mp3">
+</audio>
 
 <a class="download"
 download
 href="9 Round.mp3">
+
 ⬇ DOWNLOAD
+
 </a>
 
 </article>
@@ -473,27 +546,34 @@ href="9 Round.mp3">
 
 <article class="card">
 
-<div class="cover">♪</div>
+<img class="cover-img"
+src="10-10 Goli.jpg"
+alt="10-10 Goli">
 
-<h3>10-10 Goli</h3>
+<h3>
+10-10 Goli
+</h3>
 
 <audio controls preload="none"
-src="10-10 Goli.mp3"></audio>
+src="10-10 Goli.mp3">
+</audio>
 
 <a class="download"
 download
 href="10-10 Goli.mp3">
+
 ⬇ DOWNLOAD
+
 </a>
 
 </article>
+
 
 </div>
 
 </section>
 
 
-<!-- DOWNLOAD -->
 <section id="download">
 
 <h2>
@@ -503,12 +583,16 @@ href="10-10 Goli.mp3">
 <div class="box">
 
 <p class="muted">
+
 All uploaded tracks are available below.
 Tap DOWNLOAD on any song to save it.
+
 </p>
 
 <a class="btn" href="#songs">
+
 ⬇ SEE ALL SONGS
+
 </a>
 
 </div>
@@ -516,7 +600,6 @@ Tap DOWNLOAD on any song to save it.
 </section>
 
 
-<!-- YOUTUBE -->
 <section id="youtube">
 
 <h2>
@@ -526,7 +609,9 @@ MY <span>YOUTUBE</span>
 <div class="box">
 
 <p class="muted">
+
 HARYANVI VIBES 642 — mera official YouTube channel.
+
 </p>
 
 <a class="btn"
@@ -542,7 +627,6 @@ target="_blank">
 </section>
 
 
-<!-- ABOUT -->
 <section id="about">
 
 <h2>
@@ -552,8 +636,10 @@ ABOUT <span>MR.PRINCE</span>
 <div class="box">
 
 <p class="muted">
+
 Welcome to MR.PRINCE.COM — Haryanvi songs,
 lofi vibes, remixes and fresh music.
+
 </p>
 
 </div>
@@ -561,7 +647,6 @@ lofi vibes, remixes and fresh music.
 </section>
 
 
-<!-- CONTACT -->
 <section id="contact">
 
 <h2>
@@ -576,13 +661,17 @@ lofi vibes, remixes and fresh music.
 
 <a class="btn"
 href="tel:9694750598">
+
 CALL NOW
+
 </a>
 
 <a class="btn"
 href="https://wa.me/919694750598"
 target="_blank">
+
 WHATSAPP
+
 </a>
 
 </div>
@@ -591,8 +680,11 @@ WHATSAPP
 
 
 <footer>
+
 © 2026 MR.PRINCE.COM • Made for Music 🎵
+
 </footer>
 
 </body>
 </html>
+```
