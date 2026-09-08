@@ -1,4 +1,3 @@
-```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -148,6 +147,7 @@ margin:7px;
 border:2px solid #fff;
 font-weight:800;
 box-shadow:0 0 15px rgba(0,51,204,.6);
+cursor:pointer;
 }
 
 .cards{
@@ -388,6 +388,10 @@ font-weight:700;
 background:#fff;
 }
 
+/* =========================
+   SEARCH
+========================= */
+
 .search-box{
 display:flex;
 max-width:650px;
@@ -419,6 +423,128 @@ text-align:center;
 font-weight:700;
 margin-bottom:20px;
 }
+
+/* =========================
+   YOUTUBE
+========================= */
+
+.youtube-search{
+display:flex;
+max-width:750px;
+margin:0 auto 25px;
+gap:8px;
+}
+
+.youtube-search input{
+flex:1;
+padding:15px 18px;
+border-radius:30px;
+border:3px solid #0033cc;
+font-size:16px;
+outline:none;
+}
+
+.youtube-search button{
+border:0;
+border-radius:30px;
+background:#0033cc;
+color:#fff;
+padding:0 25px;
+font-size:16px;
+font-weight:800;
+cursor:pointer;
+}
+
+#youtubeStatus{
+text-align:center;
+font-weight:800;
+margin:15px 0;
+}
+
+.youtube-results{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(270px,1fr));
+gap:20px;
+margin-top:25px;
+}
+
+.youtube-card{
+background:#fff176;
+border:2px solid #0033cc;
+border-radius:18px;
+overflow:hidden;
+box-shadow:0 5px 20px rgba(0,51,204,.25);
+}
+
+.youtube-card img{
+width:100%;
+height:170px;
+object-fit:cover;
+display:block;
+}
+
+.youtube-card-content{
+padding:15px;
+}
+
+.youtube-card h3{
+font-size:16px;
+line-height:1.4;
+min-height:46px;
+margin:0 0 10px;
+color:#0033cc;
+}
+
+.youtube-card button{
+width:100%;
+padding:11px;
+border:0;
+border-radius:25px;
+background:#0033cc;
+color:#fff;
+font-weight:800;
+font-size:15px;
+cursor:pointer;
+}
+
+.youtube-player-box{
+display:none;
+margin-top:35px;
+background:#fff176;
+border:3px solid #0033cc;
+border-radius:20px;
+padding:20px;
+box-shadow:0 5px 25px rgba(0,51,204,.3);
+}
+
+.youtube-player-box h3{
+text-align:center;
+margin-top:0;
+}
+
+.youtube-player{
+width:100%;
+aspect-ratio:16/9;
+background:#000;
+border-radius:15px;
+overflow:hidden;
+}
+
+#youtubePlayer{
+width:100%;
+height:100%;
+}
+
+.youtube-help{
+text-align:center;
+font-size:13px;
+font-weight:600;
+margin-bottom:0;
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:760px){
 
@@ -499,6 +625,19 @@ right:10px;
 width:auto;
 bottom:100px;
 }
+
+.youtube-search{
+flex-direction:column;
+}
+
+.youtube-search button{
+padding:13px;
+}
+
+.youtube-card img{
+height:180px;
+}
+
 }
 </style>
 </head>
@@ -525,6 +664,7 @@ MR.<b>PRINCE</b>.COM
 
 
 <section id="home" class="hero">
+
 <div>
 
 <p>WELCOME TO</p>
@@ -533,9 +673,12 @@ MR.<b>PRINCE</b>.COM
 
 <p>HARYANVI • LOFI • REMIX • DJ MUSIC</p>
 
-<a class="btn" href="#songs">🎵 LISTEN NOW</a>
+<a class="btn" href="#songs">
+🎵 LISTEN NOW
+</a>
 
 </div>
+
 </section>
 
 
@@ -544,6 +687,7 @@ MR.<b>PRINCE</b>.COM
 <h2>MY <span>SONGS</span></h2>
 
 <div class="search-box">
+
 <input
 id="songSearch"
 type="search"
@@ -553,6 +697,7 @@ oninput="searchSongs()">
 <button onclick="searchSongs()">
 <i class="fa-solid fa-magnifying-glass"></i>
 </button>
+
 </div>
 
 <div id="searchStatus"></div>
@@ -562,7 +707,8 @@ oninput="searchSongs()">
 
 <article class="card song-card" data-title="2 Bande">
 
-<img class="cover-img"
+<img
+class="cover-img"
 src="2 Bande.jpg.jpg"
 alt="2 Bande">
 
@@ -583,7 +729,8 @@ href="2 Bande.mp3">
 
 <article class="card song-card" data-title="2 Khatole">
 
-<img class="cover-img"
+<img
+class="cover-img"
 src="2 Khatole.jpg.jpg"
 alt="2 Khatole">
 
@@ -604,7 +751,8 @@ href="2 Khatole.mp3">
 
 <article class="card song-card" data-title="4G Ka Jamana Remix">
 
-<img class="cover-img"
+<img
+class="cover-img"
 src="4G Ka Jamana Remix.jpg"
 alt="4G Ka Jamana Remix">
 
@@ -625,7 +773,8 @@ href="4G Ka Jamana Remix.mp3">
 
 <article class="card song-card" data-title="7 Gede">
 
-<img class="cover-img"
+<img
+class="cover-img"
 src="7 Gede.jpg.jpg"
 alt="7 Gede">
 
@@ -646,7 +795,8 @@ href="7 Gede.mp3">
 
 <article class="card song-card" data-title="9 Round">
 
-<img class="cover-img"
+<img
+class="cover-img"
 src="9 Round.jpg"
 alt="9 Round">
 
@@ -667,7 +817,8 @@ href="9 Round.mp3">
 
 <article class="card song-card" data-title="10-10 Goli">
 
-<img class="cover-img"
+<img
+class="cover-img"
 src="10-10 Goli.jpg"
 alt="10-10 Goli">
 
@@ -690,25 +841,76 @@ href="10-10 Goli.mp3">
 </section>
 
 
+<!-- =========================
+     YOUTUBE SECTION
+========================= -->
+
 <section id="youtube">
 
 <h2>YOUTUBE <span>MUSIC</span></h2>
 
 <div class="box">
 
-<i class="fa-brands fa-youtube"
-style="font-size:55px;color:#0033cc;"></i>
+<i
+class="fa-brands fa-youtube"
+style="font-size:55px;color:#0033cc;">
+</i>
 
 <p>
-YouTube music playback will be connected here using
-the official YouTube IFrame Player API.
+Search YouTube songs directly from MR.PRINCE.COM
 </p>
 
-<a class="btn"
+<div class="youtube-search">
+
+<input
+id="youtubeSearch"
+type="search"
+placeholder="Search YouTube songs...">
+
+<button onclick="searchYouTube()">
+<i class="fa-solid fa-magnifying-glass"></i>
+ SEARCH
+</button>
+
+</div>
+
+<div id="youtubeStatus"></div>
+
+<div
+id="youtubeResults"
+class="youtube-results">
+</div>
+
+<div
+id="youtubePlayerBox"
+class="youtube-player-box">
+
+<h3 id="youtubeNowPlaying">
+YouTube Player
+</h3>
+
+<div class="youtube-player">
+
+<div id="youtubePlayer"></div>
+
+</div>
+
+<p class="youtube-help">
+Official YouTube player is used. Some videos may not allow embedding.
+</p>
+
+</div>
+
+<br>
+
+<a
+class="btn"
 href="https://www.youtube.com/@HARYANVIVIBES642"
 target="_blank">
+
 <i class="fa-brands fa-youtube"></i>
 VISIT CHANNEL
+
 </a>
 
 </div>
@@ -726,9 +928,13 @@ VISIT CHANNEL
 Playlist system is ready for the next upgrade.
 </p>
 
-<button class="btn" onclick="showQueue()">
+<button
+class="btn"
+onclick="showQueue()">
+
 <i class="fa-solid fa-list"></i>
 OPEN QUEUE
+
 </button>
 
 </div>
@@ -743,12 +949,16 @@ OPEN QUEUE
 <div class="box">
 
 <p>📞 9694750598</p>
+
 <p>📧 jangirprince642@gmail.com</p>
 
-<a class="btn"
+<a
+class="btn"
 href="https://wa.me/919694750598"
 target="_blank">
+
 WHATSAPP
+
 </a>
 
 </div>
@@ -757,7 +967,9 @@ WHATSAPP
 
 
 <footer>
+
 © 2026 MR.PRINCE.COM • Made for Music 🎵
+
 </footer>
 
 
@@ -798,45 +1010,62 @@ MR.PRINCE MUSIC
 class="player-btn"
 onclick="previousSong()"
 title="Previous">
+
 <i class="fa-solid fa-backward-step"></i>
+
 </button>
+
 
 <button
 id="shuffleBtn"
 class="player-btn"
 onclick="toggleShuffle()"
 title="Shuffle">
+
 <i class="fa-solid fa-shuffle"></i>
+
 </button>
+
 
 <button
 id="playBtn"
 class="player-btn main"
 onclick="togglePlay()"
 title="Play">
+
 <i class="fa-solid fa-play"></i>
+
 </button>
+
 
 <button
 class="player-btn"
 onclick="nextSong()"
 title="Next">
+
 <i class="fa-solid fa-forward-step"></i>
+
 </button>
+
 
 <button
 id="repeatBtn"
 class="player-btn"
 onclick="toggleRepeat()"
 title="Repeat">
+
 <i class="fa-solid fa-repeat"></i>
+
 </button>
+
 
 <button
 class="player-btn queue-btn"
 onclick="showQueue()"
 title="Queue">
+
 <i class="fa-solid fa-list"></i>
+
 </button>
 
 </div>
@@ -898,6 +1127,10 @@ oninput="changeVolume(this.value)">
 
 <script>
 
+/* =====================================================
+   LOCAL SONGS
+===================================================== */
+
 const songs = [
 
 {
@@ -938,6 +1171,10 @@ cover:"10-10 Goli.jpg"
 
 ];
 
+
+/* =====================================================
+   LOCAL MUSIC PLAYER
+===================================================== */
 
 const audio =
 document.getElementById("audioPlayer");
@@ -1192,6 +1429,10 @@ return mins + ":" + secs;
 }
 
 
+/* =====================================================
+   QUEUE
+===================================================== */
+
 function updateQueue(){
 
 const queueList =
@@ -1242,6 +1483,10 @@ panel.style.display = "block";
 }
 
 
+/* =====================================================
+   LOCAL SONG SEARCH
+===================================================== */
+
 function searchSongs(){
 
 const input =
@@ -1291,13 +1536,400 @@ found + " song(s) found";
 }
 
 
-document.addEventListener("click",function(event){
+/* =====================================================
+   🔑 YOUTUBE API KEY
+   =====================================================
+
+   IMPORTANT:
+   Apni NEW YouTube API key neeche paste karo.
+
+   Example:
+
+   const YOUTUBE_API_KEY =
+   "AIzaSyXXXXXXXXXXXXXXXXXXXXXXXXXXXX";
+
+===================================================== */
+
+const YOUTUBE_API_KEY =
+"AIzaSyACQ56CN8VkHCHKQOH93HK2FJLDWOxJbS0";
+
+
+/* =====================================================
+   YOUTUBE IFRAME PLAYER
+===================================================== */
+
+let youtubePlayer = null;
+
+let youtubeAPIReady = false;
+
+
+const youtubeScript =
+document.createElement("script");
+
+youtubeScript.src =
+"https://www.youtube.com/iframe_api";
+
+document.head.appendChild(youtubeScript);
+
+
+window.onYouTubeIframeAPIReady =
+function(){
+
+youtubeAPIReady = true;
+
+console.log("✅ YouTube IFrame API Ready");
+
+};
+
+
+/* =====================================================
+   YOUTUBE SEARCH
+===================================================== */
+
+async function searchYouTube(){
+
+const input =
+document.getElementById("youtubeSearch")
+.value
+.trim();
+
+const status =
+document.getElementById("youtubeStatus");
+
+const results =
+document.getElementById("youtubeResults");
+
+
+if(!input){
+
+status.textContent =
+"⚠️ Please enter a song name.";
+
+return;
+
+}
+
+
+if(
+YOUTUBE_API_KEY ===
+"PASTE_YOUR_NEW_API_KEY_HERE"
+){
+
+status.textContent =
+"⚠️ YouTube API key add karo.";
+
+return;
+
+}
+
+
+status.textContent =
+"🔎 Searching YouTube...";
+
+results.innerHTML = "";
+
+
+try{
+
+const url =
+"https://www.googleapis.com/youtube/v3/search"
++
+"?part=snippet"
++
+"&type=video"
++
+"&maxResults=12"
++
+"&q=" +
+encodeURIComponent(input)
++
+"&key=" +
+encodeURIComponent(YOUTUBE_API_KEY);
+
+
+const response =
+await fetch(url);
+
+
+const data =
+await response.json();
+
+
+if(!response.ok){
+
+console.error(data);
+
+status.textContent =
+"❌ YouTube API Error: " +
+(
+data.error &&
+data.error.message
+?
+data.error.message
+:
+"Unknown error"
+);
+
+return;
+
+}
+
+
+if(
+!data.items ||
+data.items.length === 0
+){
+
+status.textContent =
+"❌ No videos found.";
+
+return;
+
+}
+
+
+status.textContent =
+data.items.length +
+" YouTube result(s) found";
+
+
+data.items.forEach(function(item){
+
+const videoId =
+item.id.videoId;
+
+const title =
+item.snippet.title;
+
+const thumbnail =
+item.snippet.thumbnails.high
+?
+item.snippet.thumbnails.high.url
+:
+item.snippet.thumbnails.default.url;
+
+
+const card =
+document.createElement("div");
+
+card.className =
+"youtube-card";
+
+
+card.innerHTML = `
+
+<img
+src="${thumbnail}"
+alt="YouTube thumbnail">
+
+<div class="youtube-card-content">
+
+<h3>
+${escapeHTML(title)}
+</h3>
+
+<button>
+
+<i class="fa-solid fa-play"></i>
+PLAY
+
+</button>
+
+</div>
+
+`;
+
+
+card
+.querySelector("button")
+.addEventListener(
+"click",
+function(){
+
+playYouTube(
+videoId,
+title
+);
+
+});
+
+
+results.appendChild(card);
+
+});
+
+}
+catch(error){
+
+console.error(error);
+
+status.textContent =
+"❌ Search failed. Internet/API check karo.";
+
+}
+
+}
+
+
+/* =====================================================
+   PLAY YOUTUBE VIDEO
+===================================================== */
+
+function playYouTube(
+videoId,
+title
+){
+
+const playerBox =
+document.getElementById(
+"youtubePlayerBox"
+);
+
+const nowPlaying =
+document.getElementById(
+"youtubeNowPlaying"
+);
+
+
+playerBox.style.display =
+"block";
+
+
+nowPlaying.textContent =
+title;
+
+
+if(
+!youtubeAPIReady ||
+typeof YT === "undefined" ||
+!YT.Player
+){
+
+setTimeout(
+function(){
+
+playYouTube(
+videoId,
+title
+);
+
+},
+500
+);
+
+return;
+
+}
+
+
+if(youtubePlayer){
+
+youtubePlayer.loadVideoById(
+videoId
+);
+
+}else{
+
+youtubePlayer =
+new YT.Player(
+"youtubePlayer",
+{
+
+height:"100%",
+
+width:"100%",
+
+videoId:videoId,
+
+playerVars:{
+
+autoplay:1,
+
+rel:0,
+
+modestbranding:1
+
+},
+
+events:{
+
+onReady:function(event){
+
+event.target.playVideo();
+
+}
+
+}
+
+});
+
+}
+
+
+playerBox.scrollIntoView({
+
+behavior:"smooth",
+
+block:"center"
+
+});
+
+}
+
+
+/* =====================================================
+   ENTER KEY FOR YOUTUBE SEARCH
+===================================================== */
+
+document
+.getElementById("youtubeSearch")
+.addEventListener(
+"keydown",
+function(event){
+
+if(event.key === "Enter"){
+
+searchYouTube();
+
+}
+
+});
+
+
+/* =====================================================
+   HTML SAFETY
+===================================================== */
+
+function escapeHTML(text){
+
+const div =
+document.createElement("div");
+
+div.textContent = text;
+
+return div.innerHTML;
+
+}
+
+
+/* =====================================================
+   CLOSE QUEUE
+===================================================== */
+
+document.addEventListener(
+"click",
+function(event){
 
 const panel =
-document.getElementById("queuePanel");
+document.getElementById(
+"queuePanel"
+);
 
 const button =
-event.target.closest(".queue-btn");
+event.target.closest(
+".queue-btn"
+);
+
 
 if(
 panel.style.display === "block" &&
@@ -1305,32 +1937,48 @@ panel.style.display === "block" &&
 !button
 ){
 
-panel.style.display = "none";
+panel.style.display =
+"none";
 
 }
 
 });
 
 
+/* =====================================================
+   START QUEUE
+===================================================== */
+
 updateQueue();
 
 
-/* PWA */
+/* =====================================================
+   PWA
+===================================================== */
 
-if("serviceWorker" in navigator){
+if(
+"serviceWorker" in navigator
+){
 
-window.addEventListener("load",function(){
+window.addEventListener(
+"load",
+function(){
 
 navigator.serviceWorker
 .register("./sw.js")
 .then(function(){
 
-console.log("MR.PRINCE PWA Ready");
+console.log(
+"MR.PRINCE PWA Ready"
+);
 
 })
 .catch(function(error){
 
-console.log("PWA Error:",error);
+console.log(
+"PWA Error:",
+error
+);
 
 });
 
@@ -1342,4 +1990,3 @@ console.log("PWA Error:",error);
 
 </body>
 </html>
-```
