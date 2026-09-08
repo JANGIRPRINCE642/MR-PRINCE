@@ -2,35 +2,29 @@
 <!doctype html>
 <html lang="en">
 <head>
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>MR PRINCE - Haryanvi, Lofi, Remix & Music Songs</title>
+<title>MR PRINCE - Music Player</title>
 
 <meta name="description"
-content="MR PRINCE par Haryanvi, Hindi, Lofi, Remix aur DJ music songs sune aur discover karein.">
+content="MR PRINCE - Haryanvi, Lofi, Remix & DJ Music">
 
-<!-- PWA -->
 <link rel="manifest" href="./manifest.json">
 <meta name="theme-color" content="#ffd600">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-<!-- STYLISH FONTS -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Orbitron:wght@400;500;600;700;800;900&family=Pacifico&family=Poppins:wght@400;500;600;700;800;900&display=swap"
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Pacifico&family=Poppins:wght@400;500;600;700;800;900&display=swap"
 rel="stylesheet">
 
-<!-- Font Awesome -->
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
 <style>
-
 *{
 box-sizing:border-box;
 scroll-behavior:smooth;
@@ -41,13 +35,14 @@ margin:0;
 background:#ffd600;
 color:#0033cc;
 font-family:'Poppins',Arial,sans-serif;
+padding-bottom:105px;
 }
 
 header{
 position:fixed;
 top:0;
 width:100%;
-z-index:10;
+z-index:1000;
 background:#ffd600;
 border-bottom:3px solid #0033cc;
 box-shadow:0 3px 15px rgba(0,51,204,.4);
@@ -79,7 +74,7 @@ text-shadow:
 0 0 22px #0033cc;
 }
 
-ul{
+nav ul{
 display:flex;
 gap:18px;
 list-style:none;
@@ -89,20 +84,15 @@ flex-wrap:wrap;
 justify-content:center;
 }
 
-a{
+nav a{
 color:#0033cc;
 text-decoration:none;
 font-weight:700;
-}
-
-nav a{
 font-size:13px;
-letter-spacing:.5px;
 }
 
 nav a:hover{
 color:#fff;
-text-shadow:0 0 8px #0033cc;
 }
 
 section{
@@ -126,12 +116,6 @@ radial-gradient(circle at 50% 30%,
 #ff9800 100%);
 }
 
-.hero p{
-font-size:18px;
-font-weight:800;
-letter-spacing:3px;
-}
-
 .hero h1{
 font-family:'Orbitron',sans-serif;
 font-size:clamp(45px,9vw,110px);
@@ -139,37 +123,19 @@ font-weight:900;
 letter-spacing:5px;
 margin:10px 0;
 color:#0033cc;
-
-text-shadow:
-0 0 5px #fff,
-0 0 15px #fff,
-0 0 30px rgba(0,51,204,.5);
-
-animation:glow 2s infinite alternate;
+text-shadow:0 0 5px #fff,0 0 15px #fff;
 }
 
 .hero h1 span{
 font-family:'Pacifico',cursive;
 color:#fff;
-
-text-shadow:
-0 0 5px #0033cc,
-0 0 15px #0033cc,
-0 0 30px #0033cc;
+text-shadow:0 0 8px #0033cc,0 0 20px #0033cc;
 }
 
-@keyframes glow{
-from{
-text-shadow:
-0 0 5px #fff,
-0 0 15px #fff;
-}
-to{
-text-shadow:
-0 0 8px #fff,
-0 0 20px #fff,
-0 0 35px #0033cc;
-}
+.hero p{
+font-size:18px;
+font-weight:800;
+letter-spacing:3px;
 }
 
 .btn{
@@ -181,66 +147,7 @@ color:#fff;
 margin:7px;
 border:2px solid #fff;
 font-weight:800;
-letter-spacing:.5px;
 box-shadow:0 0 15px rgba(0,51,204,.6);
-transition:.25s;
-}
-
-.btn:hover{
-transform:scale(1.06);
-background:#fff;
-color:#0033cc;
-box-shadow:0 0 20px #0033cc;
-}
-
-.social-buttons{
-display:flex;
-justify-content:center;
-align-items:center;
-gap:14px;
-flex-wrap:wrap;
-margin-top:20px;
-}
-
-.social-btn{
-width:52px;
-height:52px;
-display:flex;
-align-items:center;
-justify-content:center;
-border-radius:50%;
-background:#0033cc;
-color:#fff;
-border:2px solid #fff;
-font-size:23px;
-box-shadow:0 0 15px rgba(0,51,204,.5);
-transition:.3s;
-}
-
-.social-btn:hover{
-transform:translateY(-6px) scale(1.1);
-background:#fff;
-color:#0033cc;
-box-shadow:0 0 22px #0033cc;
-}
-
-h2{
-font-family:'Orbitron',sans-serif;
-font-size:45px;
-font-weight:900;
-letter-spacing:3px;
-text-align:center;
-margin-bottom:35px;
-color:#0033cc;
-text-shadow:0 3px 0 #fff;
-}
-
-h2 span{
-font-family:'Pacifico',cursive;
-color:#fff;
-text-shadow:
-0 0 8px #0033cc,
-0 0 15px #0033cc;
 }
 
 .cards{
@@ -261,8 +168,6 @@ overflow:hidden;
 
 .card:hover{
 transform:translateY(-8px);
-box-shadow:0 8px 30px rgba(0,51,204,.5);
-border-color:#fff;
 }
 
 .cover-img{
@@ -273,45 +178,42 @@ display:block;
 border-radius:15px;
 border:2px solid #0033cc;
 background:#0033cc;
-box-shadow:0 0 15px rgba(0,51,204,.5);
-transition:.3s;
-}
-
-.card:hover .cover-img{
-transform:scale(1.03);
-box-shadow:0 0 25px rgba(0,51,204,.8);
 }
 
 .card h3{
 font-family:'Orbitron',sans-serif;
-font-size:22px;
+font-size:21px;
 font-weight:900;
-letter-spacing:1px;
-min-height:44px;
 color:#0033cc;
 }
 
-audio{
+.card button{
 width:100%;
-margin-top:5px;
+padding:11px;
+border:0;
+border-radius:25px;
+background:#0033cc;
+color:#fff;
+font-size:16px;
+font-weight:800;
+cursor:pointer;
+margin-top:8px;
+}
+
+.card button:hover{
+background:#fff;
+color:#0033cc;
 }
 
 .download{
 display:inline-block;
-margin:14px 0 0;
-padding:11px 18px;
+margin:10px 0 0;
+padding:10px 17px;
 border-radius:25px;
 background:#0033cc;
 color:#fff;
-border:2px solid #fff;
 font-weight:800;
-transition:.25s;
-}
-
-.download:hover{
-background:#fff;
-color:#0033cc;
-box-shadow:0 0 15px #0033cc;
+text-decoration:none;
 }
 
 .box{
@@ -323,67 +225,19 @@ padding:30px;
 box-shadow:0 5px 20px rgba(0,51,204,.25);
 }
 
-.muted{
-color:#0033cc;
-font-weight:600;
-}
-
-.contact-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:18px;
-margin-top:25px;
-}
-
-.contact-card{
-background:#fff176;
-border:2px solid #0033cc;
-border-radius:18px;
-padding:25px 15px;
-text-align:center;
-transition:.3s;
-box-shadow:0 5px 20px rgba(0,51,204,.2);
-}
-
-.contact-card:hover{
-transform:translateY(-7px);
-background:#fff;
-box-shadow:0 8px 25px rgba(0,51,204,.4);
-}
-
-.contact-card i{
-font-size:38px;
-margin-bottom:12px;
-color:#0033cc;
-}
-
-.contact-card h3{
+h2{
 font-family:'Orbitron',sans-serif;
-font-size:21px;
+font-size:42px;
 font-weight:900;
-letter-spacing:1px;
-margin:5px 0;
-}
-
-.contact-card p{
-font-size:14px;
-word-break:break-word;
-font-weight:600;
-}
-
-.contact-card a{
-display:inline-block;
-margin-top:8px;
-padding:9px 16px;
-border-radius:20px;
-background:#0033cc;
-color:#fff;
-border:2px solid #fff;
-}
-
-.contact-card a:hover{
-background:#fff;
+text-align:center;
+margin-bottom:35px;
 color:#0033cc;
+}
+
+h2 span{
+font-family:'Pacifico',cursive;
+color:#fff;
+text-shadow:0 0 8px #0033cc;
 }
 
 footer{
@@ -393,46 +247,196 @@ color:#fff;
 background:#0033cc;
 border-top:3px solid #fff;
 font-weight:600;
-letter-spacing:.5px;
 }
 
-.footer-social{
-margin-top:15px;
-display:flex;
-justify-content:center;
-gap:15px;
+/* =========================
+   MUSIC PLAYER
+========================= */
+
+#musicPlayer{
+position:fixed;
+left:0;
+right:0;
+bottom:0;
+height:92px;
+background:#0033cc;
+color:#fff;
+z-index:9999;
+box-shadow:0 -5px 25px rgba(0,0,0,.35);
+display:none;
 }
 
-.footer-social a{
-width:42px;
-height:42px;
+.player-inner{
+height:100%;
+max-width:1200px;
+margin:auto;
 display:flex;
 align-items:center;
-justify-content:center;
+gap:15px;
+padding:10px 18px;
+}
+
+.player-cover{
+width:65px;
+height:65px;
+border-radius:10px;
+object-fit:cover;
+border:2px solid #fff;
+}
+
+.song-info{
+width:180px;
+min-width:130px;
+overflow:hidden;
+}
+
+.song-title{
+font-weight:900;
+white-space:nowrap;
+overflow:hidden;
+text-overflow:ellipsis;
+}
+
+.song-type{
+font-size:12px;
+opacity:.8;
+}
+
+.player-controls{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.player-btn{
+width:40px;
+height:40px;
+border:0;
 border-radius:50%;
 background:#fff;
 color:#0033cc;
-font-size:19px;
-transition:.3s;
+cursor:pointer;
+font-size:15px;
 }
 
-.footer-social a:hover{
-transform:scale(1.15);
+.player-btn.main{
+width:48px;
+height:48px;
+font-size:18px;
+}
+
+.player-btn.active{
+background:#ffd600;
+}
+
+.progress-area{
+flex:1;
+display:flex;
+align-items:center;
+gap:8px;
+font-size:12px;
+}
+
+#progress{
+width:100%;
+accent-color:#ffd600;
+cursor:pointer;
+}
+
+.volume{
+width:110px;
+}
+
+#volume{
+width:100%;
+accent-color:#ffd600;
+}
+
+.queue-btn{
+position:relative;
+}
+
+#queuePanel{
+position:fixed;
+right:15px;
+bottom:105px;
+width:330px;
+max-height:420px;
+overflow:auto;
+background:#fff176;
+border:3px solid #0033cc;
+border-radius:18px;
+padding:15px;
+z-index:10000;
+display:none;
+box-shadow:0 5px 30px rgba(0,0,0,.3);
+}
+
+#queuePanel h3{
+margin-top:0;
+font-family:'Orbitron';
+}
+
+.queue-item{
+padding:10px;
+border-bottom:1px solid #0033cc;
+cursor:pointer;
+font-weight:700;
+}
+
+.queue-item:hover{
+background:#fff;
+}
+
+.search-box{
+display:flex;
+max-width:650px;
+margin:0 auto 35px;
+gap:8px;
+}
+
+.search-box input{
+flex:1;
+padding:15px 18px;
+border-radius:30px;
+border:3px solid #0033cc;
+font-size:16px;
+outline:none;
+}
+
+.search-box button{
+border:0;
+border-radius:30px;
+background:#0033cc;
+color:#fff;
+padding:0 22px;
+font-size:18px;
+cursor:pointer;
+}
+
+#searchStatus{
+text-align:center;
+font-weight:700;
+margin-bottom:20px;
 }
 
 @media(max-width:760px){
 
 nav{
 flex-direction:column;
-gap:10px;
+gap:8px;
+}
+
+nav ul{
+gap:9px;
 }
 
 nav a{
-font-size:10px;
+font-size:9px;
 }
 
 .logo{
-font-size:21px;
+font-size:20px;
 }
 
 section{
@@ -440,34 +444,63 @@ padding-left:14px;
 padding-right:14px;
 }
 
-h2{
-font-size:34px;
-}
-
 .hero h1{
-font-size:48px;
+font-size:47px;
 letter-spacing:2px;
 }
 
 .hero p{
-font-size:14px;
-letter-spacing:2px;
+font-size:13px;
 }
 
-.cover-img{
-height:160px;
+.player-inner{
+gap:7px;
+padding:7px;
 }
 
-.social-btn{
-width:48px;
-height:48px;
-font-size:20px;
+.player-cover{
+width:52px;
+height:52px;
 }
 
+.song-info{
+width:105px;
+min-width:85px;
 }
 
+.player-controls{
+gap:4px;
+}
+
+.player-btn{
+width:34px;
+height:34px;
+}
+
+.player-btn.main{
+width:42px;
+height:42px;
+}
+
+.volume{
+display:none;
+}
+
+.progress-area{
+position:absolute;
+left:8px;
+right:8px;
+bottom:2px;
+}
+
+#queuePanel{
+left:10px;
+right:10px;
+width:auto;
+bottom:100px;
+}
+}
 </style>
-
 </head>
 
 <body>
@@ -482,91 +515,52 @@ MR.<b>PRINCE</b>.COM
 <ul>
 <li><a href="#home">HOME</a></li>
 <li><a href="#songs">SONGS</a></li>
-<li><a href="#download">DOWNLOAD</a></li>
-<li><a href="#contact">CONTACT</a></li>
 <li><a href="#youtube">YOUTUBE</a></li>
-<li><a href="#instagram">INSTAGRAM</a></li>
-<li><a href="#about">ABOUT</a></li>
+<li><a href="#playlist">PLAYLIST</a></li>
+<li><a href="#contact">CONTACT</a></li>
 </ul>
 
 </nav>
 </header>
 
-<section id="home" class="hero">
 
+<section id="home" class="hero">
 <div>
 
 <p>WELCOME TO</p>
 
-<h1>
-MR.<span>PRINCE</span>.COM
-</h1>
+<h1>MR.<span>PRINCE</span>.COM</h1>
 
-<p>
-HARYANVI • LOFI • REMIX • DJ MUSIC
-</p>
+<p>HARYANVI • LOFI • REMIX • DJ MUSIC</p>
 
-<a class="btn" href="#songs">
-🎵 LISTEN NOW
-</a>
-
-<a class="btn"
-href="https://www.youtube.com/@HARYANVIVIBES642"
-target="_blank">
-<i class="fa-brands fa-youtube"></i>
-YOUTUBE
-</a>
-
-<div class="social-buttons">
-
-<a class="social-btn"
-href="https://www.youtube.com/@HARYANVIVIBES642"
-target="_blank"
-title="YouTube">
-<i class="fa-brands fa-youtube"></i>
-</a>
-
-<a class="social-btn"
-href="https://www.instagram.com/jangir_prince_642/"
-target="_blank"
-title="Instagram">
-<i class="fa-brands fa-instagram"></i>
-</a>
-
-<a class="social-btn"
-href="https://wa.me/919694750598"
-target="_blank"
-title="WhatsApp">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
-
-<a class="social-btn"
-href="tel:9694750598"
-title="Call">
-<i class="fa-solid fa-phone"></i>
-</a>
-
-<a class="social-btn"
-href="mailto:jangirprince642@gmail.com"
-title="Email">
-<i class="fa-solid fa-envelope"></i>
-</a>
+<a class="btn" href="#songs">🎵 LISTEN NOW</a>
 
 </div>
-
-</div>
-
 </section>
+
 
 <section id="songs">
 
-<h2>
-MY <span>SONGS</span>
-</h2>
+<h2>MY <span>SONGS</span></h2>
 
-<div class="cards">
+<div class="search-box">
+<input
+id="songSearch"
+type="search"
+placeholder="Search songs..."
+oninput="searchSongs()">
 
-<article class="card">
+<button onclick="searchSongs()">
+<i class="fa-solid fa-magnifying-glass"></i>
+</button>
+</div>
+
+<div id="searchStatus"></div>
+
+<div class="cards" id="songList">
+
+
+<article class="card song-card" data-title="2 Bande">
 
 <img class="cover-img"
 src="2 Bande.jpg.jpg"
@@ -574,9 +568,9 @@ alt="2 Bande">
 
 <h3>2 Bande</h3>
 
-<audio controls preload="none"
-src="2 Bande.mp3">
-</audio>
+<button onclick="playSong(0)">
+<i class="fa-solid fa-play"></i> PLAY
+</button>
 
 <a class="download"
 download
@@ -586,7 +580,8 @@ href="2 Bande.mp3">
 
 </article>
 
-<article class="card">
+
+<article class="card song-card" data-title="2 Khatole">
 
 <img class="cover-img"
 src="2 Khatole.jpg.jpg"
@@ -594,9 +589,9 @@ alt="2 Khatole">
 
 <h3>2 Khatole</h3>
 
-<audio controls preload="none"
-src="2 Khatole.mp3">
-</audio>
+<button onclick="playSong(1)">
+<i class="fa-solid fa-play"></i> PLAY
+</button>
 
 <a class="download"
 download
@@ -606,7 +601,8 @@ href="2 Khatole.mp3">
 
 </article>
 
-<article class="card">
+
+<article class="card song-card" data-title="4G Ka Jamana Remix">
 
 <img class="cover-img"
 src="4G Ka Jamana Remix.jpg"
@@ -614,9 +610,9 @@ alt="4G Ka Jamana Remix">
 
 <h3>4G Ka Jamana Remix</h3>
 
-<audio controls preload="none"
-src="4G Ka Jamana Remix.mp3">
-</audio>
+<button onclick="playSong(2)">
+<i class="fa-solid fa-play"></i> PLAY
+</button>
 
 <a class="download"
 download
@@ -626,7 +622,8 @@ href="4G Ka Jamana Remix.mp3">
 
 </article>
 
-<article class="card">
+
+<article class="card song-card" data-title="7 Gede">
 
 <img class="cover-img"
 src="7 Gede.jpg.jpg"
@@ -634,9 +631,9 @@ alt="7 Gede">
 
 <h3>7 Gede</h3>
 
-<audio controls preload="none"
-src="7 Gede.mp3">
-</audio>
+<button onclick="playSong(3)">
+<i class="fa-solid fa-play"></i> PLAY
+</button>
 
 <a class="download"
 download
@@ -646,7 +643,8 @@ href="7 Gede.mp3">
 
 </article>
 
-<article class="card">
+
+<article class="card song-card" data-title="9 Round">
 
 <img class="cover-img"
 src="9 Round.jpg"
@@ -654,9 +652,9 @@ alt="9 Round">
 
 <h3>9 Round</h3>
 
-<audio controls preload="none"
-src="9 Round.mp3">
-</audio>
+<button onclick="playSong(4)">
+<i class="fa-solid fa-play"></i> PLAY
+</button>
 
 <a class="download"
 download
@@ -666,7 +664,8 @@ href="9 Round.mp3">
 
 </article>
 
-<article class="card">
+
+<article class="card song-card" data-title="10-10 Goli">
 
 <img class="cover-img"
 src="10-10 Goli.jpg"
@@ -674,9 +673,9 @@ alt="10-10 Goli">
 
 <h3>10-10 Goli</h3>
 
-<audio controls preload="none"
-src="10-10 Goli.mp3">
-</audio>
+<button onclick="playSong(5)">
+<i class="fa-solid fa-play"></i> PLAY
+</button>
 
 <a class="download"
 download
@@ -690,227 +689,633 @@ href="10-10 Goli.mp3">
 
 </section>
 
-<section id="download">
-
-<h2>
-<span>DOWNLOAD</span> MUSIC
-</h2>
-
-<div class="box">
-
-<p class="muted">
-All uploaded tracks are available below.
-Tap DOWNLOAD on any song to save it.
-</p>
-
-<a class="btn" href="#songs">
-⬇ SEE ALL SONGS
-</a>
-
-</div>
-
-</section>
 
 <section id="youtube">
 
-<h2>
-MY <span>YOUTUBE</span>
-</h2>
+<h2>YOUTUBE <span>MUSIC</span></h2>
 
 <div class="box">
 
 <i class="fa-brands fa-youtube"
-style="font-size:55px;color:#0033cc;">
-</i>
+style="font-size:55px;color:#0033cc;"></i>
 
-<p class="muted">
-HARYANVI VIBES 642 — mera official YouTube channel.
+<p>
+YouTube music playback will be connected here using
+the official YouTube IFrame Player API.
 </p>
 
 <a class="btn"
 href="https://www.youtube.com/@HARYANVIVIBES642"
 target="_blank">
-
 <i class="fa-brands fa-youtube"></i>
-VISIT YOUTUBE
-
+VISIT CHANNEL
 </a>
 
 </div>
 
 </section>
 
-<section id="instagram">
 
-<h2>
-MY <span>INSTAGRAM</span>
-</h2>
+<section id="playlist">
+
+<h2>MY <span>PLAYLIST</span></h2>
 
 <div class="box">
-
-<i class="fa-brands fa-instagram"
-style="font-size:55px;color:#0033cc;">
-</i>
-
-<p class="muted">
-Follow me on Instagram
-</p>
 
 <p>
-<strong>@jangir_prince_642</strong>
+Playlist system is ready for the next upgrade.
 </p>
 
-<a class="btn"
-href="https://www.instagram.com/jangir_prince_642/"
-target="_blank">
-
-<i class="fa-brands fa-instagram"></i>
-FOLLOW ON INSTAGRAM
-
-</a>
+<button class="btn" onclick="showQueue()">
+<i class="fa-solid fa-list"></i>
+OPEN QUEUE
+</button>
 
 </div>
 
 </section>
 
-<section id="about">
-
-<h2>
-ABOUT <span>MR.PRINCE</span>
-</h2>
-
-<div class="box">
-
-<p class="muted">
-Welcome to MR.PRINCE.COM — Haryanvi songs,
-lofi vibes, remixes and fresh music.
-</p>
-
-</div>
-
-</section>
 
 <section id="contact">
 
-<h2>
-<span>CONTACT</span> ME
-</h2>
+<h2><span>CONTACT</span> ME</h2>
 
-<div class="contact-grid">
+<div class="box">
 
-<div class="contact-card">
+<p>📞 9694750598</p>
+<p>📧 jangirprince642@gmail.com</p>
 
-<i class="fa-solid fa-phone"></i>
-
-<h3>CALL</h3>
-
-<p>9694750598</p>
-
-<a href="tel:9694750598">
-CALL NOW
-</a>
-
-</div>
-
-<div class="contact-card">
-
-<i class="fa-brands fa-whatsapp"></i>
-
-<h3>WHATSAPP</h3>
-
-<p>Chat with me</p>
-
-<a href="https://wa.me/919694750598"
+<a class="btn"
+href="https://wa.me/919694750598"
 target="_blank">
 WHATSAPP
 </a>
 
 </div>
 
-<div class="contact-card">
-
-<i class="fa-brands fa-instagram"></i>
-
-<h3>INSTAGRAM</h3>
-
-<p>@jangir_prince_642</p>
-
-<a href="https://www.instagram.com/jangir_prince_642/"
-target="_blank">
-INSTAGRAM
-</a>
-
-</div>
-
-<div class="contact-card">
-
-<i class="fa-solid fa-envelope"></i>
-
-<h3>EMAIL</h3>
-
-<p>jangirprince642@gmail.com</p>
-
-<a href="mailto:jangirprince642@gmail.com">
-EMAIL ME
-</a>
-
-</div>
-
-<div class="contact-card">
-
-<i class="fa-brands fa-youtube"></i>
-
-<h3>YOUTUBE</h3>
-
-<p>HARYANVI VIBES 642</p>
-
-<a href="https://www.youtube.com/@HARYANVIVIBES642"
-target="_blank">
-YOUTUBE
-</a>
-
-</div>
-
-</div>
-
 </section>
 
+
 <footer>
-
 © 2026 MR.PRINCE.COM • Made for Music 🎵
+</footer>
 
-<div class="footer-social">
 
-<a href="https://www.youtube.com/@HARYANVIVIBES642"
-target="_blank">
-<i class="fa-brands fa-youtube"></i>
-</a>
+<!-- =========================
+     MUSIC PLAYER
+========================= -->
 
-<a href="https://www.instagram.com/jangir_prince_642/"
-target="_blank">
-<i class="fa-brands fa-instagram"></i>
-</a>
+<div id="musicPlayer">
 
-<a href="https://wa.me/919694750598"
-target="_blank">
-<i class="fa-brands fa-whatsapp"></i>
-</a>
+<div class="player-inner">
 
-<a href="tel:9694750598">
-<i class="fa-solid fa-phone"></i>
-</a>
+<img
+id="playerCover"
+class="player-cover"
+src="2 Bande.jpg.jpg"
+alt="">
 
-<a href="mailto:jangirprince642@gmail.com">
-<i class="fa-solid fa-envelope"></i>
-</a>
+<div class="song-info">
+
+<div
+id="playerTitle"
+class="song-title">
+No song selected
+</div>
+
+<div
+id="playerType"
+class="song-type">
+MR.PRINCE MUSIC
+</div>
 
 </div>
 
-</footer>
 
-<!-- SERVICE WORKER / PWA -->
+<div class="player-controls">
+
+<button
+class="player-btn"
+onclick="previousSong()"
+title="Previous">
+<i class="fa-solid fa-backward-step"></i>
+</button>
+
+<button
+id="shuffleBtn"
+class="player-btn"
+onclick="toggleShuffle()"
+title="Shuffle">
+<i class="fa-solid fa-shuffle"></i>
+</button>
+
+<button
+id="playBtn"
+class="player-btn main"
+onclick="togglePlay()"
+title="Play">
+<i class="fa-solid fa-play"></i>
+</button>
+
+<button
+class="player-btn"
+onclick="nextSong()"
+title="Next">
+<i class="fa-solid fa-forward-step"></i>
+</button>
+
+<button
+id="repeatBtn"
+class="player-btn"
+onclick="toggleRepeat()"
+title="Repeat">
+<i class="fa-solid fa-repeat"></i>
+</button>
+
+<button
+class="player-btn queue-btn"
+onclick="showQueue()"
+title="Queue">
+<i class="fa-solid fa-list"></i>
+</button>
+
+</div>
+
+
+<div class="progress-area">
+
+<span id="currentTime">0:00</span>
+
+<input
+id="progress"
+type="range"
+min="0"
+max="100"
+value="0"
+step="0.1"
+oninput="seekSong(this.value)">
+
+<span id="duration">0:00</span>
+
+</div>
+
+
+<div class="volume">
+
+<i class="fa-solid fa-volume-high"></i>
+
+<input
+id="volume"
+type="range"
+min="0"
+max="1"
+step="0.01"
+value="1"
+oninput="changeVolume(this.value)">
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- QUEUE -->
+
+<div id="queuePanel">
+
+<h3>🎵 QUEUE</h3>
+
+<div id="queueList"></div>
+
+</div>
+
+
+<!-- HIDDEN AUDIO -->
+
+<audio id="audioPlayer"></audio>
+
 
 <script>
+
+const songs = [
+
+{
+title:"2 Bande",
+file:"2 Bande.mp3",
+cover:"2 Bande.jpg.jpg"
+},
+
+{
+title:"2 Khatole",
+file:"2 Khatole.mp3",
+cover:"2 Khatole.jpg.jpg"
+},
+
+{
+title:"4G Ka Jamana Remix",
+file:"4G Ka Jamana Remix.mp3",
+cover:"4G Ka Jamana Remix.jpg"
+},
+
+{
+title:"7 Gede",
+file:"7 Gede.mp3",
+cover:"7 Gede.jpg.jpg"
+},
+
+{
+title:"9 Round",
+file:"9 Round.mp3",
+cover:"9 Round.jpg"
+},
+
+{
+title:"10-10 Goli",
+file:"10-10 Goli.mp3",
+cover:"10-10 Goli.jpg"
+}
+
+];
+
+
+const audio =
+document.getElementById("audioPlayer");
+
+const musicPlayer =
+document.getElementById("musicPlayer");
+
+const playerTitle =
+document.getElementById("playerTitle");
+
+const playerCover =
+document.getElementById("playerCover");
+
+const playBtn =
+document.getElementById("playBtn");
+
+const progress =
+document.getElementById("progress");
+
+const currentTime =
+document.getElementById("currentTime");
+
+const duration =
+document.getElementById("duration");
+
+let currentIndex = 0;
+
+let shuffle = false;
+
+let repeat = false;
+
+
+function playSong(index){
+
+currentIndex = index;
+
+const song = songs[currentIndex];
+
+audio.src = song.file;
+
+playerTitle.textContent = song.title;
+
+playerCover.src = song.cover;
+
+musicPlayer.style.display = "block";
+
+audio.play();
+
+updatePlayButton();
+
+updateQueue();
+
+}
+
+
+function togglePlay(){
+
+if(!audio.src){
+
+playSong(0);
+
+return;
+
+}
+
+if(audio.paused){
+
+audio.play();
+
+}else{
+
+audio.pause();
+
+}
+
+updatePlayButton();
+
+}
+
+
+function updatePlayButton(){
+
+if(audio.paused){
+
+playBtn.innerHTML =
+'<i class="fa-solid fa-play"></i>';
+
+}else{
+
+playBtn.innerHTML =
+'<i class="fa-solid fa-pause"></i>';
+
+}
+
+}
+
+
+function nextSong(){
+
+if(shuffle){
+
+let next =
+Math.floor(Math.random()*songs.length);
+
+if(songs.length > 1){
+
+while(next === currentIndex){
+
+next =
+Math.floor(Math.random()*songs.length);
+
+}
+
+}
+
+currentIndex = next;
+
+}else{
+
+currentIndex++;
+
+if(currentIndex >= songs.length){
+
+currentIndex = 0;
+
+}
+
+}
+
+playSong(currentIndex);
+
+}
+
+
+function previousSong(){
+
+if(audio.currentTime > 3){
+
+audio.currentTime = 0;
+
+return;
+
+}
+
+currentIndex--;
+
+if(currentIndex < 0){
+
+currentIndex = songs.length - 1;
+
+}
+
+playSong(currentIndex);
+
+}
+
+
+function toggleShuffle(){
+
+shuffle = !shuffle;
+
+document
+.getElementById("shuffleBtn")
+.classList.toggle("active",shuffle);
+
+}
+
+
+function toggleRepeat(){
+
+repeat = !repeat;
+
+document
+.getElementById("repeatBtn")
+.classList.toggle("active",repeat);
+
+}
+
+
+audio.addEventListener("ended",function(){
+
+if(repeat){
+
+audio.currentTime = 0;
+
+audio.play();
+
+}else{
+
+nextSong();
+
+}
+
+});
+
+
+audio.addEventListener("timeupdate",function(){
+
+if(!audio.duration) return;
+
+progress.value =
+(audio.currentTime / audio.duration) * 100;
+
+currentTime.textContent =
+formatTime(audio.currentTime);
+
+duration.textContent =
+formatTime(audio.duration);
+
+});
+
+
+function seekSong(value){
+
+if(!audio.duration) return;
+
+audio.currentTime =
+(value / 100) * audio.duration;
+
+}
+
+
+function changeVolume(value){
+
+audio.volume = value;
+
+}
+
+
+function formatTime(seconds){
+
+if(!seconds || isNaN(seconds)){
+
+return "0:00";
+
+}
+
+let mins =
+Math.floor(seconds / 60);
+
+let secs =
+Math.floor(seconds % 60);
+
+if(secs < 10){
+
+secs = "0" + secs;
+
+}
+
+return mins + ":" + secs;
+
+}
+
+
+function updateQueue(){
+
+const queueList =
+document.getElementById("queueList");
+
+queueList.innerHTML = "";
+
+songs.forEach(function(song,index){
+
+const item =
+document.createElement("div");
+
+item.className = "queue-item";
+
+item.textContent =
+(index + 1) + ". " + song.title;
+
+item.onclick = function(){
+
+playSong(index);
+
+};
+
+queueList.appendChild(item);
+
+});
+
+}
+
+
+function showQueue(){
+
+const panel =
+document.getElementById("queuePanel");
+
+if(panel.style.display === "block"){
+
+panel.style.display = "none";
+
+}else{
+
+updateQueue();
+
+panel.style.display = "block";
+
+}
+
+}
+
+
+function searchSongs(){
+
+const input =
+document.getElementById("songSearch")
+.value
+.toLowerCase()
+.trim();
+
+const cards =
+document.querySelectorAll(".song-card");
+
+let found = 0;
+
+cards.forEach(function(card){
+
+const title =
+card.dataset.title.toLowerCase();
+
+if(title.includes(input)){
+
+card.style.display = "";
+
+found++;
+
+}else{
+
+card.style.display = "none";
+
+}
+
+});
+
+const status =
+document.getElementById("searchStatus");
+
+if(input === ""){
+
+status.textContent = "";
+
+}else{
+
+status.textContent =
+found + " song(s) found";
+
+}
+
+}
+
+
+document.addEventListener("click",function(event){
+
+const panel =
+document.getElementById("queuePanel");
+
+const button =
+event.target.closest(".queue-btn");
+
+if(
+panel.style.display === "block" &&
+!panel.contains(event.target) &&
+!button
+){
+
+panel.style.display = "none";
+
+}
+
+});
+
+
+updateQueue();
+
+
+/* PWA */
 
 if("serviceWorker" in navigator){
 
